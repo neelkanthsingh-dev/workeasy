@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+  <!-- Unique job label -->
+  <key>Label</key>
+  <string>com.daily.reports</string>
+
+  <!-- Command: run run_reports.py using the Naukri venv Python -->
+  <key>ProgramArguments</key>
+  <array>
+    <string>/Users/n02/dsa/Naukri/.venv/bin/python</string>
+    <string>/Users/n02/dsa/Naukri/run_reports.py</string>
+  </array>
+
+  <!-- Working directory -->
+  <key>WorkingDirectory</key>
+  <string>/Users/n02/dsa/Naukri</string>
+
+  <!-- Run daily at 18:00 IST (local time — launchd uses local time, not UTC) -->
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Hour</key>
+    <integer>18</integer>
+    <key>Minute</key>
+    <integer>0</integer>
+  </dict>
+
+  <!-- Also run at login/startup — catches up if machine was off at 18:00 -->
+  <key>RunAtLoad</key>
+  <true/>
+
+  <!-- Log stdout and stderr to files -->
+  <key>StandardOutPath</key>
+  <string>/Users/n02/dsa/Naukri/logs/reports_launchd.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/n02/dsa/Naukri/logs/reports_launchd.err.log</string>
+
+  <!-- Do not throttle restarts -->
+  <key>ThrottleInterval</key>
+  <integer>0</integer>
+
+</dict>
+</plist>

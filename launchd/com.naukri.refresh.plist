@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+  <!-- Unique job label -->
+  <key>Label</key>
+  <string>com.naukri.refresh</string>
+
+  <!-- Command: run run_daily.py using the venv Python -->
+  <key>ProgramArguments</key>
+  <array>
+    <string>/Users/n02/dsa/Naukri/.venv/bin/python</string>
+    <string>/Users/n02/dsa/Naukri/run_daily.py</string>
+  </array>
+
+  <!-- Working directory -->
+  <key>WorkingDirectory</key>
+  <string>/Users/n02/dsa/Naukri</string>
+
+  <!-- Run daily at 22:00 IST (16:30 UTC) -->
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Hour</key>
+    <integer>16</integer>
+    <key>Minute</key>
+    <integer>30</integer>
+  </dict>
+
+  <!-- Also run at login/startup — catches up if machine was off at 22:00 -->
+  <key>RunAtLoad</key>
+  <true/>
+
+  <!-- Log stdout and stderr to files -->
+  <key>StandardOutPath</key>
+  <string>/Users/n02/dsa/Naukri/logs/launchd.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/n02/dsa/Naukri/logs/launchd.err.log</string>
+
+  <!-- Do not throttle restarts -->
+  <key>ThrottleInterval</key>
+  <integer>0</integer>
+
+</dict>
+</plist>

@@ -1,0 +1,7 @@
+requests
+openai
+reportlab
+tqdm
+browser-use
+langchain-anthropic
+playwright

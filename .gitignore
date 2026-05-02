@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# Secrets & credentials
+.env
+.session.json
+*.session.json
+secrets/
+
+# Naukri runtime files
+naukri/logs/
+naukri/Resume.pdf
+
+# Job tracker data & output
+job-tracker/data/
+
+# Compensations output files
+compensations/*_raw_page_*.json
+compensations/*_results*.json
+compensations/results.json
+compensations/compensation_report_*.pdf
+compensations/interview_career/
+compensations/jobspy_research/
+compensations/linkedin_scraper_research/
+compensations/__pycache__/
+compensations/Untitled-1
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Logs
+*.log
+*.err.log
+logs/
